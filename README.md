@@ -60,3 +60,27 @@ add pry in Gemfile `gem 'pry'`
 add pry in .rb app `require 'pry'` 
 
 execute pry within the .rb file `binding.pry`
+
+-----
+
+## Dotenv
+add pry in Gemfile `gem 'dotenv'` 
+
+in .env (repo root) :
+```
+NEW_API="my-api-key"
+```
+
+in .rb app file :
+```
+require 'dotenv'
+
+Dotenv.load 
+
+puts ENV['NEW_API']
+```
+
+in .gitignore (repo root) : 
+```
+.env
+```
