@@ -55,6 +55,8 @@ find gems => https://rubygems.org/
 
 -----
 
-#### PRY
+## PRY
 add pry in Gemfile `gem 'pry'` 
 add pry in .rb app `require 'pry'` 
+
+execute pry within the .rb file `binding.pry`
