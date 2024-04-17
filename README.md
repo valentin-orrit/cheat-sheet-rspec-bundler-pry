@@ -4,13 +4,22 @@
 ```
 mon_projet
 ├── lib
-│   └── app.rb
+│   ├── app
+│   │   ├── scrapper.rb
+│   │   └── email_sender.rb
+│   └── views
+│       ├── done.rb
+│       └── index.rb
+├── db
+│   └── thing.csv
 ├── spec
 │   ├── spec_helper.rb
-│   └── app_spec.rb
+│   └── scrapper_spec.rb
+├── app.rb
 ├── README.md
 ├── Gemfile
 ├── Gemfile.lock
+├── Autres fichiers (.env, .gitignore)
 └── .rspec
 ```
 
@@ -47,6 +56,16 @@ gem 'pry'
 ```
 Get the Bundle 
 `$ bundle install`
+
+In app.rb
+```
+require 'bundler'
+Bundler.require
+
+$:.unshift File.expand_path("./../lib", __FILE__)
+require 'app/fichier_1'
+require 'views/fichier_2'
+```
  
 
 ### Install gem en particulier 
